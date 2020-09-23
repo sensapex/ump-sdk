@@ -1,0 +1,29 @@
+By Stuart Box at OxSyBio Ltd, 2017.
+
+info@oxsybio.com
+
+OxSyBio Ltd, The Walbrook Building, 25 Walbrook, London, EC4N 8AF
+
+
+This software is provided WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+This software uses a library called "ump.dll" from Sensapex. By using this software, any license agreements or disclaimers associated with "ump.dll" may also apply.
+
+
+
+Content & instructions
+--------------------------------------
+It suggested that this software is used by first opening the LabVIEW project file. The project explorer should show the "uMp_library.lvlib". Within the "Wrapper_VIs" folder, there are VIs which act as LabVIEW wrappers for functions in the Sensapex software "ump.dll". Note that these VIs represent only a subset of the functions in ump.dll.
+
+In general, the "Open" VI/function must be called first, and the resulting "handle" is required by other VIs in the library. Please see "Example_application.vi" in the "Example Application" folder for an example of how to use the VIs in this library.
+
+Most of the VIs here are wrappers for the "advanced" functions in "ump.dll", which require you to specify the index number for the manipulator that you want to communicate with. However, "get_xyz_position.vi" corresponds to a "simple" function in "ump.dll". To use "get_xyz_position.vi", you must have previously selected the desired manipulator by calling "select_device.vi". As mentioned previously, there are further functions available within "ump.dll", so you may wish to write your own LabVIEW code to go beyond what is available here.
+
+If an error occurs within "ump.dll", you may have to close all LabVIEW software before starting again. Note that there is no additional handling for "ump.dll" functions returning "-3", which is a timeout error. You may want to write your own code to re-try any operations that timeout in this way.
+
+
+Custom LabVIEW error codes used
+--------------------------------------
+-8005: incorrect xyz array length
+-8007: error returned from uMp.dll
+-8008: timeout returned from uMp.dll

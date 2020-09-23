@@ -1,0 +1,20 @@
+/**
+@mainpage  Sensapex micromanipulator SDK (umpsdk)
+@section intro Documentation
+
+For C++ application there is an inline wrapper class #LibUmp
+
+To the SDK under C application (or any accepting a library with a standard
+C API) examine the C API defined by libump.h.
+
+First open the port by calling #LibUmp::open or #ump_open.
+
+How to use the methods or functions examine the provided examples.
+
+Before terminating the program call #LibUmp::close or let the object's
+destructor to call it, for C-API call #ump_close.
+
+Contact support@sensapex.com for assistance and feedback.
+
+*/
+
