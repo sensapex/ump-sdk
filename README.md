@@ -1,7 +1,9 @@
 # ump-sdk
 SDK for Sensapex uMp micromanipulators.
 
-Use umsdk for new design.
+This is legacy SDK version that has been transferred to maintentance mode.
+
+For new users and application development we recommend starting with umsdk, which is the new major development branch and includes support for all Sensapex uMx products.
 
 Generate doxygen documentation and examine doc/html/index.html for details.
 
